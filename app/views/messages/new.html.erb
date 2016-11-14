@@ -1,0 +1,25 @@
+<% page_header "Start IOU" %>
+
+<%= form_tag messages_path, method: :post do %>
+  <div class="form-group">
+    <%= label_tag 'message[Title]', 'Why are you sending this IOU?' %>
+    <%= text_field_tag 'message[Title]', nil, class: 'form-control', required: true %>
+  </div>
+
+  <div class="form-group">
+    <%= label_tag 'message[Description]', 'Go ahead and give a lil detail' %>
+    <%= text_area_tag 'message[Description]', nil, cols: 3, class: 'form-control', required: true %>
+  </div>
+
+  <div class="form-group">
+    <%= label_tag 'recipients', 'Who do you owe an IOU too?' %>
+    <%= select_tag 'recipients', recipients_options, multiple: true, class: 'form-control' %>
+  </div>
+
+<div class="form-group">
+  <%= label_tag 'recipients', 'Choose recipients' %>
+  <%= select_tag 'recipients', recipients_options(@chosen_recipient), multiple: true, class: 'form-control chosen-it' %>
+</div>
+
+  <%= submit_tag 'Send that IOU', class: 'btn btn-primary' %>
+<% end %>
