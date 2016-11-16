@@ -1,0 +1,16 @@
+.jumbotron{
+  margin:3em auto;
+  background-color: white;
+  font-family: 'Ubuntu Condensed', sans-serif;
+  font-size: 2em;
+  text-align: center;
+  opacity: .9;
+}
+.container-fluid{
+  background: url(http://i.imgur.com/nIQ9lnO.jpg) no-repeat center center fixed;
+  background-size: cover;
+}
+html{
+  background: url(http://i.imgur.com/nIQ9lnO.jpg) no-repeat center center fixed;
+  background-size: cover;
+}

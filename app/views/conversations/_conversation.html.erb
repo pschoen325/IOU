@@ -1,10 +1,7 @@
-<div class="container">
-  <div class="page_header">
-    <h1>iOU</h1>
-    <h3>Menu</h3>
-  </div>
-</div>
-<li class="list-group-item clearfix">
+<div class="container-fluid">
+  <div class="jumbotron col-xs-12">
+  
+  <li class="list-group-item clearfix">
   <%= link_to conversation.subject, conversation_path(conversation) %>
 
   <div class="btn-group-vertical pull-right">
@@ -21,4 +18,7 @@
 
   <p><%= conversation.last_message.body %>
     <small>(<span class="text-muted"><%= conversation.last_message.created_at.strftime("%-d %B %Y, %H:%M:%S") %></span>)</small></p>
-</li>
+  </li>
+  </div>
+</div>
+<%= stylesheet_link_tag 'messages.css' %>
