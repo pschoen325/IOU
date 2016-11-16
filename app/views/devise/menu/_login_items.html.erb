@@ -1,9 +1,9 @@
 <% if user_signed_in? %>
-  <li>
+  <button class="sign_in btn">
   <%= link_to "Sign out", destroy_user_session_path, :method => :get %>
-  </li>
+</button>
 <% else %>
-  <li>
+  <button class="sign_in btn">
   <%= link_to('Login', new_user_session_path)  %>
-  </li>
+</button>
 <% end %>

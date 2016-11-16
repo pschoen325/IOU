@@ -5,38 +5,38 @@
 <div class="container">
   <div class="page_header">
     <h1>iOU</h1>
-    <h3>your conversations</h3>
+    <h3>Hello <%= current_user.name %>!</h3>
   </div>
 </div>
 <div class="row">
-  <div class="col-sm-3">
+  <div class="col-sm-12 col-m-12">
     <ul class="nav nav-pills nav-stacked">
       <%= mailbox_section 'inbox', @box %>
       <%= mailbox_section 'sent', @box %>
       <%= mailbox_section 'trash', @box %>
+      <li><a href="messages/new">New IOU</a></li>
     </ul>
   </div>
 
-  <div class="col-sm-9">
-    <ul class="list-group">
-      <%= render partial: 'conversations/conversation', collection: @conversations %>
-    </ul>
 
-    <%= will_paginate %>
-  </div>
 
-  <div class="col-sm-9">
-  <% if @box == 'trash' %>
-    <p><%= link_to 'Empty trash', empty_trash_conversations_path, class: 'btn btn-danger', method: :delete,
-                   data: {confirm: 'Are you sure?'} %></p>
-  <% end %>
+
+  <%= will_paginate %>
+</div>
+</div>
+<div class="col-sm-12">
   <ul class="list-group">
     <%= render partial: 'conversations/conversation', collection: @conversations %>
   </ul>
 
   <%= will_paginate %>
 </div>
-</div>
+
+<div class="col-sm-12">
+<% if @box == 'trash' %>
+  <p><%= link_to 'Empty trash', empty_trash_conversations_path, class: 'btn btn-danger', method: :delete,
+                 data: {confirm: 'Are you sure?'} %></p>
+<% end %>
 </div>
 </div>
 <%= stylesheet_link_tag 'messages.css' %>

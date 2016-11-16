@@ -1,11 +1,9 @@
 <div class="container">
   <div class="page_header">
-    <h1>iOU</h1>
-    <h3>Menu</h3>
   </div>
 </div>
 <% conversation.participants.each do |participant| %>
   <% unless participant == current_user %>
-    <%= gravatar_for participant %>
+    <p> From:<%= gravatar_for participant %></p>
   <% end %>
 <% end %>

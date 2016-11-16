@@ -1,8 +1,6 @@
-<% page_header "Conversation" %>
-
-<p>Chatting with
+<div class="container-fluid">
+<div class="jumbotron col-xs-12">
   <%= render 'conversations/participants', conversation: @conversation %>
-</p>
 
 <div class="panel panel-default">
   <div class="panel-heading"><%= @conversation.subject %></div>
@@ -26,3 +24,6 @@
     </div>
   </div>
 </div>
+</div>
+</div>
+<%= stylesheet_link_tag 'messages.css' %>

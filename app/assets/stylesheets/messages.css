@@ -14,3 +14,11 @@ html{
   background: url(http://i.imgur.com/nIQ9lnO.jpg) no-repeat center center fixed;
   background-size: cover;
 }
+.sign_in{
+  float:right;
+  margin: 2px;
+  background-color: white;
+}
+.sign_in:hover{
+  background-color: light-gray;
+}
