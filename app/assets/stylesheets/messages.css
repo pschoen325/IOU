@@ -10,10 +10,12 @@
 .container-fluid{
   background: url(http://i.imgur.com/nIQ9lnO.jpg) no-repeat center center fixed;
   background-size: cover;
+  background-repeat: repeat repeat;
 }
 html{
   background: url(http://i.imgur.com/nIQ9lnO.jpg) no-repeat center center fixed;
   background-size: cover;
+  background-repeat: repeat repeat;
 }
 .form-control{
   height: 2em;
