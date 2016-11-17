@@ -4,6 +4,6 @@
 </div>
 <% conversation.participants.each do |participant| %>
   <% unless participant == current_user %>
-    <p> From:<%= gravatar_for participant %></p>
+    <p> To: <%= gravatar_for participant %></p>
   <% end %>
 <% end %>

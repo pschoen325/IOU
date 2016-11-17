@@ -1,4 +1,5 @@
 .jumbotron{
+  margin: auto;
   margin:3em auto;
   background-color: white;
   font-family: 'Ubuntu Condensed', sans-serif;
@@ -14,6 +15,24 @@ html{
   background: url(http://i.imgur.com/nIQ9lnO.jpg) no-repeat center center fixed;
   background-size: cover;
 }
+.form-control{
+  height: 2em;
+}
+#message_Description
+{
+    font-size:1em;
+    text-align: center;
+}
+input[type="text"]
+{
+    font-size:1em;
+    text-align: center;
+}
+select option
+{
+    font-size:3em;
+    text-align: center;
+}
 .sign_in{
   float:right;
   margin: 2px;
@@ -21,4 +40,8 @@ html{
 }
 .sign_in:hover{
   background-color: light-gray;
+}
+input{
+  border: 1px solid black;
+  border-radius: 5%;
 }
